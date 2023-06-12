@@ -1,9 +1,11 @@
 // Add imports above this line
-import { galleryItems } from './gallery-items';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import { galleryItems } from './gallery-items';
 // Change code below this line
 const galleryOfImages = document.querySelector('ul.gallery');
+
+galleryOfImages.style.listStyle = 'none';
 
 const imagesMarkup = galleryItems.reduce(
   (acc, { original, preview, description }) =>

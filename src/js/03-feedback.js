@@ -23,11 +23,11 @@ function handleFormInput() {
 }
 
 function handleReloadPage() {
-  const formStorage = JSON.parse(localStorage.getItem(FEEDBACK_FORM_KEY));
-
+  const formStorage = JSON.parse(localStorage.getItem(FEEDBACK_FORM_KEY)) || {};
+  const { email, message } = formStorage;
   if (formStorage) {
-    refs.emailRef.value = formStorage.email;
-    refs.messageRef.value = formStorage.message;
+    refs.emailRef.value = email;
+    refs.messageRef.value = message;
   }
 }
 

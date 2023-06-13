@@ -39,7 +39,7 @@ function handleFormSubmit(e) {
   }
 
   console.log({
-    email: refs.emailRef.value,
+    email: refs.emailRef.value.toLowerCase().trim(),
     message: refs.messageRef.value,
   });
 

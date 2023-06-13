@@ -15,7 +15,7 @@ handleReloadPage();
 
 function handleFormInput() {
   const inputInfoObject = {
-    email: refs.emailRef.value.trim(),
+    email: refs.emailRef.value.toLowerCase().trim(),
     message: refs.messageRef.value,
   };
 

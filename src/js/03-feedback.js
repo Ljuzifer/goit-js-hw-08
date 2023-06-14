@@ -26,8 +26,8 @@ function handleReloadPage() {
   const formStorage = JSON.parse(localStorage.getItem(FEEDBACK_FORM_KEY)) || {};
   const { email, message } = formStorage;
   if (formStorage) {
-    refs.emailRef.value = email;
-    refs.messageRef.value = message;
+    refs.emailRef.value = email || '';
+    refs.messageRef.value = message || '';
   }
 }
 
